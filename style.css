@@ -4,6 +4,13 @@
   }
 }
 
+@keyframes init {
+  from {
+    transform: translate(0, -100%);
+    opacity: 0;
+  }
+}
+
 .active {
   display: grid !important;
 }
@@ -48,6 +55,7 @@ body {
   height: 100vh;
   background: #ededed;
   backdrop-filter: blur(10px);
+  animation: init 1s ease-in-out;
 }
 
 .header {
@@ -168,6 +176,12 @@ li a {
 }
 
 @media screen and (min-width: 600px) {
+  @keyframes init {
+    from {
+      top: -100%;
+      opacity: 0;
+    }
+  }
   .card {
     max-width: 400px;
     height: auto;
