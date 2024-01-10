@@ -1,0 +1,71 @@
+@import "flex";
+@import "buttons";
+
+.header {
+    @include flex-center($direction: column);
+
+    background-image: url(/assets/plane-bg.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    font-family: $font-family-default;
+
+    @media (min-width: $brakepoint-md) {
+        width: 50vw;
+        height: 100vh;
+        padding-right: 2rem;
+        position: relative;
+        align-items: flex-end;
+        background-position: right;
+    }
+
+    &__button--share {
+        // @include button($color: $bg-white ,$font-size: 0.7rem);
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 0.2rem;
+        img {
+            width: 1.4rem;
+            height: 1.4rem;
+            margin-right: 0.2rem;    
+        }
+    }
+
+    &__title {
+        color: $font-white;
+        transform: translateY(-2vh);
+
+        h1 {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        p {
+            font-size: 0.8rem;
+            font-weight: 200;
+        }
+    }
+
+    &__img {
+        transform: translateY(-2vh);
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 2px solid $font-white;
+        box-shadow: 4px 4px 5.7px 0px rgba(0, 0, 0, 0.25);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            // filter: saturate(0);
+        }
+    }
+}

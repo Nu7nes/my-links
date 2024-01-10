@@ -1,0 +1,15 @@
+@mixin button ($color: $color-blue1, $bg-color: transparent, $font-size: 1rem) {
+    color: $color;
+    background-color: $bg-color;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    font-size: $font-size;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: filter 0.2s ease-in-out;
+    &:hover {
+        filter: brightness(90%);
+    }
+}

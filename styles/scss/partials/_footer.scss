@@ -1,0 +1,35 @@
+@import "flex";
+
+.footer {
+    @include flex-center($direction: row);
+    background-color: $bg-gray;
+    height: 3rem;
+    gap: 0.2rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @media (min-width: $brakepoint-md) {
+        width: 50vw;
+    }
+    p{
+        font-size: 0.6rem;
+        color: $font-gray;
+        font-family: $font-family-default;
+        font-weight: 300;
+        margin: 0;
+    }
+
+    a{
+        text-decoration: none;
+        color: $color-blue1;
+        font-family: $font-family-default;
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.14px;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

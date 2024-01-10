@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Exo&display=swap"
+            rel="stylesheet"
+        />
+        <title>Nu7nes</title>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Nu7nes</title>
-</head>
+    <body>
+        <header class="header">
+            <button class="header__button--share">
+                <img src="./assets/icons/svg/share_button2.svg" alt="compartilhar" />
+            </button>
 
-<body>
-    <div class="loader active"></div>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo&display=swap" rel="stylesheet">
-
-    <section class="card">
-        <div class="header">
-            <div id="top">
-                <p>Seja bem vindo!</p>
-                <!-- <select>
-                    <option>PT</option>
-                    <option>EN</option>
-                </select> -->
+            <div class="header__img">
+                <img src="./assets/avatar.png" alt="logo" />
             </div>
-            <div class="avatar">
-                <img src="./assets/avatar" alt="avatar">
+            <div class="header__title">
+                <h1>Bruno Nunes</h1>
+                <p>Desenvolvedor Web</p>
             </div>
-            <h1>Bruno Nunes</h1>
-        </div>
-        <ul id="links"></ul>
+        </header>
 
-    </section>
+        <main class="main">
+            <article class="cta">
+                <div class="cta__title">
+                    <h2>Procurando desenvolvedor?</h2>
+                    <p>Acesse minha pagina e entre em contato.</p>
+                </div>
+                <a
+                    class="cta__button--access"
+                    href="https://www.brunonunes.site"
+                >Acesse</a>
+            </article>
+            <ul id="list_links" class="main__list"></ul>
+        </main>
 
-    <script>
-        window.onload = ()=>{
-            document.getElementsByClassName('loader')[0].classList.remove('active')
-        }
-    </script>
-    <script type="module" src="./scripts/script.js"></script>
-</body>
+        <footer class="footer">
+            <p>Developed by:</p>
+            <a href="https://github.com/nu7nes" target="_blank">
+                Bruno Nunes
+            </a>
+        </footer>
 
+        <script src="./scripts/script.js"></script>
+    </body>
 </html>

@@ -1,0 +1,99 @@
+@import "flex";
+@import "call-to-action";
+@import "buttons";
+
+.main {
+    @include flex-center($direction: column);
+    justify-content: flex-start;
+    background: $bg-gradient;
+    // margin-top: 2rem;
+    width: 100%;
+    min-height: 50vh;
+    position: relative;
+    transform: translateY(-5vh);
+    border-top-left-radius: 2rem;
+
+    @media (min-width: $brakepoint-md) {
+        position: static;
+        justify-content: center;
+        width: 50vw;
+        height: 100vh;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 2rem;
+        transform: translateY(0);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 4rem;
+        height: 4rem;
+        top: -4rem;
+        right: 0;
+        border-radius: 50%;
+        background-color: transparent;
+        box-shadow: 20px 20px 0 -10px $bg-white;
+
+        @media (min-width: $brakepoint-md) {
+            display: none;            
+        }
+    }
+
+    &__list {
+        list-style: none;
+        width: 90%;
+        margin: 4rem 0 2rem 0;
+        @media (min-width: $brakepoint-md) {
+            margin: 0;
+            padding: 0;
+            
+        }
+    }
+
+    &__item {
+        @include flex-center($direction: row, $justify: space-between);
+        @media (min-width: $brakepoint-md) {
+            gap: 0;            
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__button--link {
+        @include button(
+            $font-size: 0.7rem
+        );
+        width: 100%;
+        @media (min-width: $brakepoint-md) {
+            padding-left: 0;
+        }
+        a {
+            @include flex-center($direction: row-reverse, $justify: flex-end);
+            color: $color-blue1;
+            text-decoration: none;
+            font-family: $font-family-default;
+            font-weight: 500;
+            line-height: normal;
+            letter-spacing: 0.14px;
+            width: 100%;
+            img {
+                width: 2rem;
+                margin-left: 0.5rem;
+            }
+        }
+
+    }
+
+    &__button--share {
+        @include button(
+            $color: $color-blue1,
+            $font-size: 0.8rem
+        );
+        transform: rotate(90deg);
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            background-color: $bg-white ;
+        }
+    }
+}
