@@ -25,7 +25,7 @@ links.forEach((link) => {
     a.target = "_blank";
     a.rel = "noopener noreferrer";
 
-    logo.src = `./assets/icons/svg/${link}.svg`;
+    logo.src = `./assets/icons/svg/${link.toLocaleLowerCase()}.svg`;
     logo.alt = link;
 
     area.appendChild(li);
