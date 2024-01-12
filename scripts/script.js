@@ -47,9 +47,9 @@ function shareLink(el) {
 
             navigator
                 .share({
-                    title: "Título do compartilhamento",
-                    text: "Texto do compartilhamento",
-                    url: "https://exemplo.com",
+                    title: "Desenvolvedor Web",
+                    text: "Desenvolvedor Web | Nunes",
+                    url: el.dataset.link,
                 })
                 .then(() => {
                     window.isSharing = false;
