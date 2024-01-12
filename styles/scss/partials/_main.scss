@@ -32,7 +32,7 @@
         right: 0;
         border-radius: 50%;
         background-color: transparent;
-        box-shadow: 20px 20px 0 -10px $bg-white;
+        box-shadow: 20px 20px 0 -10px #F4F4F4;
 
         @media (min-width: $brakepoint-md) {
             display: none;            

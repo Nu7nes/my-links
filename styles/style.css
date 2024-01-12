@@ -208,7 +208,7 @@ body {
   right: 0;
   border-radius: 50%;
   background-color: transparent;
-  box-shadow: 20px 20px 0 -10px #fff;
+  box-shadow: 20px 20px 0 -10px #F4F4F4;
 }
 @media (min-width: 768px) {
   .main::before {
