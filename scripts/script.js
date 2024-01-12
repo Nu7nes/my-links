@@ -22,13 +22,13 @@ links.forEach((link) => {
     shareBtn.dataset.link = CreateLink(link);
     shareBtn.setAttribute("aria-label", "compatilhar");
     shareBtn.setAttribute("onclick", "shareLink(this)");
+    share.title = "Compartilhe este link";
     shareBtn.innerHTML = `<img src="./assets/icons/svg/share_button1.svg" alt="share" />`;
 
     a.href = CreateLink(link);
     a.innerText = link.toUpperCase();
     a.target = "_blank";
     a.rel = "noopener noreferrer";
-    a.title = "Compartilhe este link";
 
     logo.src = `./assets/icons/svg/${link.toLocaleLowerCase()}.svg`;
     logo.alt = link;
