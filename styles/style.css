@@ -62,15 +62,26 @@ body {
 }
 .header__title {
   color: #fff;
-  transform: translateY(-2vh);
+  text-align: center;
 }
 .header__title h1 {
   font-size: 1.2rem;
   font-weight: 500;
 }
 .header__title p {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   font-weight: 200;
+}
+@media (min-width: 768px) {
+  .header__title {
+    text-align: right;
+  }
+  .header__title h1 {
+    font-size: 1.8rem;
+  }
+  .header__title p {
+    font-size: 1rem;
+  }
 }
 .header__img {
   transform: translateY(-2vh);
@@ -81,10 +92,17 @@ body {
   border: 2px solid #fff;
   box-shadow: 4px 4px 5.7px 0px rgba(0, 0, 0, 0.25);
 }
+@media (min-width: 768px) {
+  .header__img {
+    width: 130px;
+    height: 130px;
+  }
+}
 .header__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: saturate(0);
 }
 
 .cta {
@@ -107,7 +125,9 @@ body {
 @media (min-width: 768px) {
   .cta {
     top: 65%;
-    left: -144px;
+    left: -192px;
+    height: 5rem;
+    max-width: inherit;
   }
 }
 .cta__title {
@@ -124,6 +144,14 @@ body {
   font-size: 0.6rem;
   font-weight: 400;
 }
+@media (min-width: 768px) {
+  .cta__title {
+    font-size: 0.8rem;
+  }
+  .cta__title p {
+    font-size: 0.9rem;
+  }
+}
 .cta__button--access {
   color: #fff;
   background-color: #1554af;
@@ -139,6 +167,11 @@ body {
 }
 .cta__button--access:hover {
   filter: brightness(90%);
+}
+@media (min-width: 768px) {
+  .cta__button--access {
+    font-size: 1rem;
+  }
 }
 
 .main {
@@ -185,7 +218,7 @@ body {
 .main__list {
   list-style: none;
   width: 90%;
-  margin: 4rem 0 2rem 0;
+  margin: 3rem 0 2rem 0;
 }
 @media (min-width: 768px) {
   .main__list {
@@ -212,7 +245,7 @@ body {
   border: none;
   border-radius: 0.3rem;
   padding: 0.5rem 1rem;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   cursor: pointer;
   text-decoration: none;
   text-align: center;
@@ -224,7 +257,20 @@ body {
 }
 @media (min-width: 768px) {
   .main__button--link {
+    color: #1554af;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: filter 0.2s ease-in-out;
     padding-left: 0;
+  }
+  .main__button--link:hover {
+    filter: brightness(90%);
   }
 }
 .main__button--link a {

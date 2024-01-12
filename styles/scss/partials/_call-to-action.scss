@@ -15,7 +15,9 @@
 
     @media (min-width: $brakepoint-md) {
         top: 65%;
-        left: -144px;
+        left: -192px;
+        height: 5rem;
+        max-width: inherit;
     }
 
     &__title {
@@ -31,6 +33,12 @@
             font-size: 0.6rem;
             font-weight: 400;
         }
+        @media (min-width: $brakepoint-md) {
+            font-size: 0.8rem;
+            p {
+                font-size: 0.9rem;
+            }
+        }
     }
 
     &__button--access {
@@ -40,5 +48,9 @@
             $font-size: 0.8rem
         );
         font-family: $font-family-default;
+
+        @media (min-width: $brakepoint-md) {
+            font-size: 1rem;
+        }
     }
 }
