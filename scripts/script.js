@@ -41,7 +41,6 @@ links.forEach((link) => {
 });
 
 function shareLink(el) {
-    console.log(el.dataset.link);
     if (navigator.share) {
         if (!window.isSharing) {
             window.isSharing = true;
